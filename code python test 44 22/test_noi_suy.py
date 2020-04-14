@@ -40,6 +40,9 @@ with open("interpolation_result.js", "a") as result_file:
         devia = math.inf
         if devia > distance(lat1, lon1, lat2, lon2):
             devia = round(distance(lat1, lon1, lat2, lon2) * 100) / 100
+            with open ("distance.txt", "a") as distance_file:
+                distance_file.write(str(devia) + "\n")
+            distance_file.close() 
             if devia <= 20.0:
                 print("PASS")
                 pass_count += 1

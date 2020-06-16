@@ -25,8 +25,8 @@ pass_count = 0
 total = 0
 
 # write distance into result file 
-with open("interpolation_result.js", "a") as result_file:
-    result_file.write('const interpolation_data = {"type":"FeatureInterpolation","features": [')
+with open("interpolation_default.js", "a") as result_file:
+    result_file.write('const interpolation_default = {"type":"FeatureInterpolation","features": [')
     for each_test in test_data_44_22.test_datas:
         total += 1
         housenumber = each_test["housenumber"]
